@@ -6,12 +6,11 @@
   "author": "",
   "type": "commonjs",
   "main": "server.js",
- "scripts": {
+"scripts": {
   "server": "node server/server.js",
-  "client": "cd client && npm run dev",
-  "build": "npm install --include=dev && cd client && npm install --include=dev --legacy-peer-deps && npm run build",
-  "start": "node server/server.js",
-  "dev": "concurrently \"npm run server\" \"npm run client\""
+  "hotel": "cd hotel && npm run dev",
+  "build": "cd hotel && npm run build",
+  "dev": "concurrently \"npm run server\" \"npm run hotel\""
 },
   "dependencies": {
     "axios": "^1.13.2",
