@@ -6,12 +6,13 @@
   "author": "",
   "type": "commonjs",
   "main": "server.js",
-  "scripts": {
+ "scripts": {
   "server": "node server/server.js",
-  "hotel": "cd hotel && npm run dev",
-  "build": "npm install && cd hotel && npm install --legacy-peer-deps && npm run build",
-  "dev": "concurrently \"npm run server\" \"npm run hotel\""
-  },
+  "client": "cd client && npm run dev",
+  "build": "npm install --include=dev && cd client && npm install --include=dev --legacy-peer-deps && npm run build",
+  "start": "node server/server.js",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+},
   "dependencies": {
     "axios": "^1.13.2",
     "bcryptjs": "^3.0.3",
