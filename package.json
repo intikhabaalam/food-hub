@@ -9,7 +9,7 @@
   "scripts": {
   "server": "node server/server.js",
   "hotel": "cd hotel && npm run dev",
-  "build": "npm install && cd hotel && npm install && npm run build",
+  "build": "npm install && cd hotel && npm install --legacy-peer-deps && npm run build",
   "dev": "concurrently \"npm run server\" \"npm run hotel\""
   },
   "dependencies": {
