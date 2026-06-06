@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6B00;
+  --color-primary-hover: #E05E00;
+  --color-secondary: #FFB800;
+  --color-dark: #121212;
+  --color-bg-light: #FFF8F0;
+  --color-accent: #FF3D00;
+}
+
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism helpers */
+.glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-dark {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium shadows */
+.premium-shadow {
+  box-shadow: 0 10px 30px -10px rgba(255, 107, 0, 0.15), 
+              0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.premium-shadow-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(255, 107, 0, 0.3), 
+              0 2px 10px rgba(255, 107, 0, 0.1);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF3D00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3D00;
+}

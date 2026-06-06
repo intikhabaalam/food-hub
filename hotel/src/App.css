@@ -1,0 +1,64 @@
+/* ===== MAIN LOADER ===== */
+.loader {
+  height: 100vh;
+  background: #0b0b0b; /* dark luxury */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+.loader.fade-out {
+  opacity: 0;
+}
+
+/* ===== CONTENT ===== */
+.loader-content {
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* ===== LOGO TEXT ===== */
+.logo-text {
+  font-size: 42px;
+  letter-spacing: 6px;
+  color: #d4af37; /* gold */
+  font-weight: 600;
+}
+
+/* ===== LINE ANIMATION ===== */
+.line {
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  margin: 15px auto;
+  animation: lineGrow 1.5s ease forwards;
+}
+
+/* ===== TAGLINE ===== */
+.tagline {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes lineGrow {
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
